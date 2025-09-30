@@ -1,0 +1,8 @@
+.caja {
+  width: 200px;
+  height: 50px;
+  border: 2px solid blue;
+  /* El contenido se saldrá de la caja */
+  overflow-y: hidden; 
+}
+

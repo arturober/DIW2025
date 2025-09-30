@@ -1,0 +1,40 @@
+/* Estilo base para la superposición */
+.contenedor-apilado {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    margin: 50px;
+    border: 1px solid #ccc;
+}
+
+.caja {
+    position: absolute; /* ¡CLAVE! Hace que z-index funcione */
+    width: 150px;
+    height: 100px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    /* Las cajas están ligeramente desplazadas para que se superpongan */
+}
+
+.caja-roja {
+    background-color: red;
+    top: 20px;
+    left: 20px;
+    z-index: 1; /* El más bajo, queda abajo de todos */
+}
+
+.caja-azul {
+    background-color: blue;
+    top: 40px;
+    left: 40px;
+    z-index: 3; /* Queda entre la roja y la verde */
+}
+
+.caja-verde {
+    background-color: green;
+    top: 60px;
+    left: 60px;
+    z-index: 5; /* ¡El más alto, queda en la capa superior! */
+}

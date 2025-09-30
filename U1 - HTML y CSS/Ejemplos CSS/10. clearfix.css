@@ -1,0 +1,18 @@
+.contenedor-problema {
+    border: 2px solid grey;
+}
+
+.caja-flotante {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background-color: lightblue;
+}
+
+.contenedor-solucionado {
+    clear: both;
+    border: 2px solid grey;
+    overflow: auto;
+    /* ¡La solución mágica! */
+}

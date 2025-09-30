@@ -1,0 +1,37 @@
+.caja {
+  width: 150px;
+  height: 50px;
+  margin: 10px;
+  border: 2px solid gray;
+  background-color: lightgray;
+  text-align: center;
+}
+
+.caja-relative {
+  /* Habilita la propiedad 'left' */
+  position: relative; 
+  background-color: lightgreen;
+  
+  /* El elemento se mueve 50px hacia la derecha desde su posición original */
+  left: 50px; 
+}
+.contenedor-padre {
+  /* Establece el punto de referencia para la caja absoluta */
+  position: relative; 
+  width: 300px;
+  height: 150px;
+  margin: 30px;
+  border: 3px dashed blue;
+}
+
+.caja-absolute {
+  /* Saca el elemento del flujo normal */
+  position: absolute; 
+  background-color: lightcoral;
+  width: 100px;
+  height: 100px;
+
+  /* La caja se alinea con el borde izquierdo del contenedor-padre */
+  left: 0; 
+  top: 25px; /* Para distinguirlo, lo movemos 25px hacia abajo */
+}

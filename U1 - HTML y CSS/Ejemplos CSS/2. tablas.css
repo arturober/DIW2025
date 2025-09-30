@@ -1,0 +1,20 @@
+.mi-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  border-collapse: separate;
+  /* El navegador ajusta las columnas al contenido */
+  /* table-layout: auto;  */
+  table-layout: fixed;
+  border-spacing: 8px;
+  empty-cells: hide;
+}
+
+.mi-tabla th, .mi-tabla td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  width: 50%; /* Especificamos que cada columna ocupe el 50% */
+  overflow: hidden; /* Oculta el contenido que no cabe */
+  text-overflow: ellipsis; /* Añade "..." al final del texto cortado */
+  white-space: nowrap; /* Evita que el texto salte de línea */
+}
