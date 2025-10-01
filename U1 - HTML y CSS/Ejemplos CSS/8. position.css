@@ -89,3 +89,7 @@ body {
     /* Esto significa: "Mantente en position: relative hasta que mi borde superior
      toque los 0px de la parte superior del viewport, entonces compórtate como fixed." */
 }
+
+.bloque{
+    height: 1000px;
+}

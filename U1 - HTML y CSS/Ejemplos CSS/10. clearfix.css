@@ -11,8 +11,8 @@
 }
 
 .contenedor-solucionado {
-    clear: both;
+    clear: both;/* para que no se posicione junto con .contenedor-problema */
     border: 2px solid grey;
-    overflow: auto;
+    overflow: auto; /* auto o */
     /* ¡La solución mágica! */
 }

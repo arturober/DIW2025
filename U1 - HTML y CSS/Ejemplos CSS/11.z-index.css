@@ -38,3 +38,56 @@
     left: 60px;
     z-index: 5; /* ¡El más alto, queda en la capa superior! */
 }
+
+/**/
+
+.padre-rojo, .padre-verde {
+  position: absolute; /* Se convierten en contextos de apilamiento */
+  width: 250px;
+  height: 150px;
+  padding: 20px;
+  border: 3px solid black;
+}
+
+/* 1. Contexto de Apilamiento Rojo (z-index bajo) */
+.padre-rojo {
+  background-color: lightsalmon;
+  top: 50px;
+  left: 50px;
+  z-index: 2; /* ¡CLAVE! Este z-index es bajo */
+}
+
+.hijo-rojo {
+  position: absolute;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  top: 50px;
+  left: 50px;
+  /* Un z-index altísimo... */
+  z-index: 999;
+}
+
+/* 2. Contexto de Apilamiento Verde (z-index alto) */
+.padre-verde {
+  background-color: lightgreen;
+  top: 100px;
+  left: 150px;
+  z-index: 5; /* ¡CLAVE! Este z-index es alto (mayor que 2) */
+}
+
+.hijo-verde {
+  position: absolute;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  top: 50px;
+  left: 50px;
+  /* Un z-index bajo, pero no importa... */
+  z-index: 10;
+  /* 
+  La regla clave es: El z-index de un elemento hijo nunca puede superar al z-index
+   de su elemento padre en relación con otros elementos fuera de ese contexto- 
+   El hijo estará "encerrado" en la capa de su padre.
+   */
+}

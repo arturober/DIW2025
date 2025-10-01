@@ -1,0 +1,208 @@
+/* Se aplica a los enlaces (<a>) que nunca han sido visitados por el usuario. */
+a:link {
+    color: #007bff;
+    text-decoration: none; /* Sin subrayado por defecto */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Se aplica a los enlaces (<a>) que han sido visitados por el usuario. */
+a:visited {
+    color: #28a745; /* Verde para indicar que ya lo vimos */
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/* Se aplica cuando el cursor está sobre el enlace. */
+a:hover {
+    color: #dc3545;
+    text-decoration: underline;
+}
+
+/* Se aplica en el momento exacto en que se hace click. */
+a:active {
+    color: #6f42c1;
+}
+
+.input-foco {
+    padding: 8px;
+    border: 1px solid gray;
+    transition: all 0.2s; /* Hacemos la transición suave */
+}
+
+/* Cuando el usuario hace click o tabula aquí: */
+.input-foco:focus {
+    border-color: #f39c12;
+    background-color: #fffacd;
+    outline: none; /* Elimina el borde azul nativo */
+}
+
+/* Estilos de la etiqueta por defecto */
+.label-check {
+    color: #333;
+    font-weight: normal;
+}
+
+/* Cuando la casilla está marcada: */
+/* La pseudoclase se aplica al input, pero usamos el selector de hermano adyacente (+) */
+/* para aplicar el estilo a la etiqueta (label) que está al lado. */
+#acepto:checked + .label-check {
+    /* Cambiar el estilo de la etiqueta para confirmar la selección */
+    color: #27ae60;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Estilos base */
+body { padding: 20px; }
+.campo { margin-bottom: 15px; }
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+
+/* Cuando el campo tiene el atributo disabled */
+input[type="text"]:disabled {
+    background-color: #f8f9fa;
+    color: #a0a0a0; 
+    border-style: dashed;
+    cursor: not-allowed; 
+}
+
+
+/* Cuando el campo tiene el atributo readonly */
+input[type="text"]:read-only {
+    background-color: #ffe0b2;
+    border-color: #ff9800;
+    color: #5d4037;
+}
+
+/* Cuando el campo NO tiene los atributos readonly O disabled */
+input[type="text"]:read-write {
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+    font-weight: bold;
+}
+
+/* Cuando el campo NO tiene el atributo disabled */
+/* Es similar a :read-write, pero engloba a :read-write Y :read-only */
+/* Aquí la aplicamos al :read-write para añadirle un foco cuando esté activo */
+input[type="text"]:enabled:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Halo azul de foco */
+    border-color: #007bff;
+}
+
+
+/* Tercer formulario */
+body { padding: 20px; }
+.campo { margin-bottom: 20px; }
+input {
+    display: block;
+    width: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+/* Se aplica a campos con el atributo required */
+input:required {
+    /* Fondo que recuerda al usuario que el campo es crucial */
+    background-color: #fff8e1;
+    border-left: 5px solid orange;
+}
+
+/* Se aplica a campos sin el atributo required (como el teléfono) */
+input:optional {
+    background-color: #f7f9fc; 
+    border-left: 5px solid #ccc;
+}
+
+
+/* Si un campo requerido está vacío O el formato no es correcto (p.ej. email sin @) */
+input:invalid {
+    border-color: #e74c3c; 
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+/* Si el campo cumple con su requisito de formato y/o obligatoriedad */
+input:valid {
+    border-color: #2ecc71;
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+}
+
+/*  Si el input numérico está fuera de los valores min/max */
+input[type="number"]:out-of-range {
+    border-color: #e74c3c; 
+    background-color: #fce4ec; 
+    font-weight: bold;
+}
+
+/* Si el input numérico está dentro de los valores min/max */
+input[type="number"]:in-range {
+    border-color: #3498db;
+    background-color: #e3f2fd;
+}
+
+.lista-productos li:not(.especial) {
+    background-color: #e3f2fd;
+    color: #1976d2;           
+    border-left: 5px solid #1976d2;
+    font-weight: normal;
+}
+
+li:nth-last-child(even){
+    color: red;
+}
+li:nth-last-child(odd){ /* impar */
+    color: blue;
+}/* 
+li:nth-last-child(2n){
+    color: pink;
+}
+li:nth-child(2n+1){
+    color: purple;
+} */
+
+li:nth-child(n + 3) { /* Aplica estilo desde el 3 item en adelante*/
+    font-style: italic;
+    opacity: 0.7;
+}
+
+p:first-of-type {
+    background-color: #bbdefb;
+    border-left: 5px solid #1e88e5;
+    font-weight: bold;
+}
+
+/* 2. :last-of-type (El último <p> encontrado) */
+/* Selecciona el último <p> dentro del contenedor (Ignora el <span> posterior) */
+p:last-of-type {
+    background-color: #c8e6c9; 
+    border-right: 5px solid #43a047;
+    font-style: italic;
+}
+
+/* 3. :nth-of-type(n) (El tercer <p> encontrado) */
+/* Selecciona el tercer elemento <p> del contenedor */
+p:nth-of-type(3) {
+    background-color: #ffccbc;
+    border: 2px dashed #ff5722;
+    color: #d84315;
+}
+
+
+
+/* 4. :nth-last-of-type(n) (El segundo <p> contando desde el final) */
+/* Selecciona el segundo <p> contando hacia atrás. */
+p:nth-last-of-type(2) {
+    /* Este será el TERCER párrafo en el orden normal (el que tiene el background-color ffccbc) */
+    text-transform: uppercase;
+    text-decoration: underline;
+}

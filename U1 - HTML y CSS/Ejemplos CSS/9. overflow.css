@@ -1,8 +1,29 @@
 .caja {
   width: 200px;
   height: 50px;
-  border: 2px solid blue;
-  /* El contenido se saldrá de la caja */
-  overflow-y: hidden; 
+  border: 2px solid blue;  
 }
 
+.visible{
+  /* El contenido se saldrá de la caja */
+  overflow-y: visible; 
+}
+.hidden{
+  /* Visualiza sólo el contenido que cabe */
+  overflow: hidden;
+}
+.scroll{
+  /* te pone las barras tanto en eje x como en y */
+  overflow: scroll;
+}
+.auto{
+  /* dependiendo del navegador te pondrá una o las dos barras
+  dependiendo por donde sobresalga el contenido
+  */
+  overflow: auto;
+}
+
+.vertical{
+  overflow-x: hidden; /* Oculta cualquier desbordamiento horizontal */
+  overflow-y: auto;   /* Añade scroll vertical si es necesario */
+}

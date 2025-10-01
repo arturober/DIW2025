@@ -1,0 +1,97 @@
+/* Estilos generales y del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    display: flex; /* Para centrar el contenedor en la página */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+/* 1. Contenedor Padre */
+.contenedor {
+    /* Clave 1: Darle un tamaño fijo */
+    width: 400px;
+    height: 400px;
+    background-color: #333; 
+    border: 5px solid #00bcd4;
+    /* Clave 2: Establecer position: relative */
+    /* Esto hace que sea el "punto de origen" o "contexto de posicionamiento" */
+    /* para sus hijos con position: absolute */
+    position: relative; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 2. Estilos Comunes de las Cajas Hijas */
+.caja {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border: 2px dashed white;
+    box-sizing: border-box; /* Para que width/height incluyan el padding/border */
+    
+    /* Clave 3: Establecer position: absolute */
+    /* Esto permite moverlas con top, bottom, left, right */
+    position: absolute;
+}
+
+/* 3. Posicionamiento Específico */
+
+/* Caja Superior Izquierda */
+.caja-1 {
+    background-color: #e91e63;
+    /* Posición: desde la esquina superior izquierda del contenedor padre */
+    top: 0; 
+    left: 0;
+}
+
+/* Caja Superior Derecha */
+.caja-2 {
+    background-color: #ff9800; 
+    /* Posición: desde la esquina superior derecha del contenedor padre */
+    top: 0; 
+    right: 0;
+}
+
+/* Caja Inferior Izquierda */
+.caja-3 {
+    background-color: #4caf50;
+    /* Posición: desde la esquina inferior izquierda del contenedor padre */
+    bottom: 0; 
+    left: 0;
+}
+
+/* Caja Inferior Derecha */
+.caja-4 {
+    background-color: #2196f3;
+    /* Posición: desde la esquina inferior derecha del contenedor padre */
+    bottom: 0; 
+    right: 0;
+}
+
+/* Estilo adicional: Una pequeña superposición para hacerlo más dinámico */
+/* Mueve las cajas 10px hacia adentro */
+.contenedor:hover .caja {
+    transition: transform 0.3s ease-out;
+}
+
+.contenedor:hover .caja-1 {
+    transform: translate(10px, 10px);
+}
+
+.contenedor:hover .caja-2 {
+    transform: translate(-10px, 10px);
+}
+
+.contenedor:hover .caja-3 {
+    transform: translate(10px, -10px);
+}
+
+.contenedor:hover .caja-4 {
+    transform: translate(-10px, -10px);
+}
