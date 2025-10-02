@@ -1,5 +1,8 @@
 .etiqueta::before {
-    content: "🔥"; 
+    content: "🔥";
+}
+.etiqueta::after {
+    content: "🔥";
 }
 h1::first-letter{
      color: red;
