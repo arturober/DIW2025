@@ -13,6 +13,7 @@ header h1 {
 /* --- Propiedades del Contenedor Padre --- */
 .galeria-productos {
     display: flex;
+    flex-direction: row-reverse;
     /* 1. Activa Flexbox */
     gap: 20px;
     /* Espacio entre las tarjetas */

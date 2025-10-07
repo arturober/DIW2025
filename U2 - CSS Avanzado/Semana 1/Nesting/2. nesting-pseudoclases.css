@@ -11,7 +11,7 @@ main {
         /*Aquí, & representa .mi-boton.
         * Por lo tanto, &:hover es equivalente a .mi-boton:hover
         */
-        &:hover {
+        &:hover { /* main .mi-boton:hover */
             background-color: #2980b9;
         }
     }
