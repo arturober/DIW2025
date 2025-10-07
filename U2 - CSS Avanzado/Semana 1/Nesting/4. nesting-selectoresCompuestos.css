@@ -7,7 +7,7 @@
 
     /* '&' se convierte en '.btn-rojo'
      La regla final es: .btn-rojo.activo (sin espacio) */
-    &.activo {
+    &.activo {/* .btn-rojo.activo */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         font-weight: bold;
     }
