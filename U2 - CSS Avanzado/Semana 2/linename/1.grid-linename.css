@@ -1,0 +1,56 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.miGrid {
+    gap: 20px;
+    /* Separación de cada celda del grid */
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    display: grid;    
+    grid-template-columns: [aside-start]1fr [aside-end]1fr [main-start]1fr [main-end]1fr;
+    grid-template-rows: [header]100px [main]1fr [footer]100px;
+
+    .item {
+        /* Estilos comunes a todas las celdas */
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        color: #333;
+        font-size: 1.2rem;
+        display: grid;
+        place-items: center;
+    }
+
+    .header {
+        background-color: #4a90e2;
+        color: white;
+        /* Forma Abreviada: Empieza en la línea 1 y termina en la última (-1) */
+        grid-column: aside-start / main-end;
+        grid-row: header;
+    }
+
+    .aside {
+        background-color: #34495e;
+        color: white;
+        grid-column: aside-start / aside-end;
+        grid-row: main;
+    }
+
+    .main-content {
+        background-color: #f5a623;
+        grid-column: aside-end / main-end;
+        grid-row: main;
+    }
+
+    .footer {
+        background-color: #4a4a4a;
+        color: white;
+        grid-column: aside-start / main-end;
+        grid-row: footer;
+    }
+}
