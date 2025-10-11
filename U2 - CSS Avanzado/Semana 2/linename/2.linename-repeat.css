@@ -12,7 +12,7 @@
     height: 100vh;
     display: grid;    
     grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
-    grid-template-rows: [header]100px [main]1fr [footer]100px;
+    grid-template-rows: [header]100px [main]3fr [card]1fr [footer]100px;
 
     .item {
         /* Estilos comunes a todas las celdas */
@@ -37,13 +37,25 @@
         background-color: #34495e;
         color: white;
         grid-column: col-start 1 / col-end 1;
-        grid-row: main;
+        grid-row: main / footer;
     }
 
     .main-content {
         background-color: #f5a623;
         grid-column: col-start 2 / col-end 4;
         grid-row: main;
+    }
+    .card-1 {
+        background-color: #50e3c2;
+        grid-column: col-start 2 / col-start 3;
+        grid-row: card;
+    }
+
+    .card-2 {
+        background-color: #bd10e0;
+        color: white;
+        grid-column: col-start 3 / col-end 4;
+        grid-row: card;
     }
 
     .footer {

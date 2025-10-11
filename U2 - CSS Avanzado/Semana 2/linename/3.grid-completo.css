@@ -40,33 +40,7 @@
         grid-row: main;
     }
 
-    .main-content {                
-        grid-column: col-start 2 / col-end 4;
-        grid-row: main;
-        grid-template-columns: [section1-start]1fr [section1-end section2-start]2fr  [section2-end];
-        grid-template-rows: [principal]3fr [section]1fr;
-        
-        .subitems{
-            width: 80%;
-            height: 80%;
-        }
-
-        .article{
-            background-color: #f5a623;
-            grid-column: section1-start / section2-end;
-            grid-row: principal;            
-        }
-        .card-1{
-            background-color: #50e3c2;
-            grid-column: section1-start /section1-end;
-            grid-row: section;            
-        }
-        .card-2{
-            background-color: #bd10e0;
-            grid-column: section2-start / section2-end;
-            grid-row: section;            
-        }
-    }
+    /* Inserta el código aquí para hacer tu grid anidado :) */
 
     .footer {
         background-color: #4a4a4a;

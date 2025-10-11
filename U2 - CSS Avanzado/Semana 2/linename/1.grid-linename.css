@@ -11,8 +11,8 @@
     max-width: 1200px;
     height: 100vh;
     display: grid;    
-    grid-template-columns: [aside-start]1fr [aside-end]1fr [main-start]1fr [main-end]1fr;
-    grid-template-rows: [header]100px [main]1fr [footer]100px;
+    grid-template-columns: [aside-start]1fr [aside-end card1-start]1fr [card1-end]1fr [card2-start card2-mid]1fr [card2-mid2 card2-end];
+    grid-template-rows: [header]100px [main]3fr [card]1fr [footer]100px;
 
     .item {
         /* Estilos comunes a todas las celdas */
@@ -30,7 +30,7 @@
         background-color: #4a90e2;
         color: white;
         /* Forma Abreviada: Empieza en la línea 1 y termina en la última (-1) */
-        grid-column: aside-start / main-end;
+        grid-column: aside-start / card2-end;
         grid-row: header;
     }
 
@@ -38,19 +38,30 @@
         background-color: #34495e;
         color: white;
         grid-column: aside-start / aside-end;
-        grid-row: main;
+        grid-row: main / footer;
     }
 
     .main-content {
         background-color: #f5a623;
-        grid-column: aside-end / main-end;
+        grid-column: aside-end / card2-end;
         grid-row: main;
     }
+    .card-1 {
+        background-color: #50e3c2;
+        grid-column: aside-end / card1-end;
+        grid-row: card;
+    }
 
+    .card-2 {
+        background-color: #bd10e0;
+        color: white;
+        grid-column: card1-end / card2-end;
+        grid-row: card;
+    }
     .footer {
         background-color: #4a4a4a;
         color: white;
-        grid-column: aside-start / main-end;
+        grid-column: aside-start / card2-end;
         grid-row: footer;
     }
 }
