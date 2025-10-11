@@ -22,29 +22,51 @@
         padding: 20px;
         color: #333;
         font-size: 1.2rem;
-        display: grid;
-        place-items: center;
+        color: white;
+        place-content: center;
+        text-align: center;
     }
 
     .header {
-        background-color: #4a90e2;
-        color: white;
+        background-color: #4a90e2;        
         grid-column: col-start 1 / col-end 4;
         grid-row: header;
     }
 
     .aside {
-        background-color: #34495e;
-        color: white;
+        background-color: #34495e;        
         grid-column: col-start 1 / col-end 1;
         grid-row: main;
     }
 
-    /* Inserta el código aquí para hacer tu grid anidado :) */
+    .main-content {                
+        grid-column: col-end 1 / col-end 4;
+        grid-row: main;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: [section1-start]1fr [section1-end section2-start]2fr [section2-end];
+        grid-template-rows: [principal]3fr [section]1fr;
+        
+
+        .article{
+            background-color: #f5a623;
+            grid-column: section1-start / section2-end;
+            grid-row: principal;            
+        }
+        .card-1{
+            background-color: #50e3c2;
+            grid-column: section1-start /section1-end;
+            grid-row: section;            
+        }
+        .card-2{
+            background-color: #bd10e0;
+            grid-column: section2-start / section2-end;
+            grid-row: section;            
+        }
+    }
 
     .footer {
         background-color: #4a4a4a;
-        color: white;
         grid-column: col-start 1 / col-end 4;
         grid-row: footer;
     }

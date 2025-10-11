@@ -20,15 +20,15 @@
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         padding: 20px;
-        color: #333;
+        color: white;
         font-size: 1.2rem;
-        display: grid;
-        place-items: center;
+        text-align: center;
+        place-content: center;
     }
 
     .header {
         background-color: #4a90e2;
-        color: white;
+        
         /* Forma Abreviada: Empieza en la línea 1 y termina en la última (-1) */
         grid-column: aside-start / card2-end;
         grid-row: header;
@@ -36,7 +36,6 @@
 
     .aside {
         background-color: #34495e;
-        color: white;
         grid-column: aside-start / aside-end;
         grid-row: main / footer;
     }
@@ -54,13 +53,11 @@
 
     .card-2 {
         background-color: #bd10e0;
-        color: white;
         grid-column: card1-end / card2-end;
         grid-row: card;
     }
     .footer {
         background-color: #4a4a4a;
-        color: white;
         grid-column: aside-start / card2-end;
         grid-row: footer;
     }
