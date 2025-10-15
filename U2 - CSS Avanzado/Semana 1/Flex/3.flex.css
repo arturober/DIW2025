@@ -42,7 +42,7 @@ body {
   /* Item A: Base */
   .item-A {
     /* flex-basis: Define el tamaño inicial del ítem antes de crecer o encogerse. */
-    flex-basis: 150px; 
+    flex-basis: 150px;
   }
   
   /* Item B: Crece */
@@ -50,7 +50,7 @@ body {
     background-color: #e74c3c;
     color: white;
     /* flex-grow: Define la proporción de espacio libre que debe tomar el ítem. */
-    flex-grow: 3; /* Toma 3 veces más espacio que cualquier otro ítem con flex-grow: 1 */
+    flex-grow: 3;
     flex-basis: 50px; /* Tamaño base muy pequeño, permitiendo más crecimiento. */
   }
   
@@ -58,10 +58,10 @@ body {
   .item-C {
     background-color: #f1c40f;
     /* order: Define el orden de aparición. Valores más bajos van primero. */
-    order: -1; /* Mover este ítem al principio, independientemente de su posición en el HTML. */
+    order: -1;
     
     /* align-self: Sobreescribe align-items del padre para este ítem. */
-    align-self: flex-start; /* Se alinea a la parte superior (inicio del eje transversal) */
+    align-self: flex-start;
   }
   
   /* Item D: Encogimiento forzado y Alineación personalizada */
@@ -69,12 +69,9 @@ body {
     background-color: #27ae60;
     color: white;
     /* order: Mover este ítem al final. */
-    order: 10; 
+    order: 99;
     
     /* align-self: Sobreescribe align-items del padre para este ítem. */
-    align-self: flex-end; /* Se alinea a la parte inferior (final del eje transversal) */
-    
-    /* flex-shrink: Define la capacidad de encogerse si el contenedor es demasiado pequeño. */
-    /* flex-shrink: 0; /* Si se establece en 0, el ítem D nunca se encogería por debajo de su flex-basis */ 
+    align-self: flex-end;          
   }
 }
