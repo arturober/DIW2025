@@ -22,3 +22,18 @@
         font-size: 24px;
     }
 }
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .item {
+        flex: 1 1 100px;
+        background-color: red;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+    }
+}
