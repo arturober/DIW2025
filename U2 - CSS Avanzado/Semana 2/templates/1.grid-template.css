@@ -13,7 +13,7 @@
     display: grid;
     /* Grid de 4 columnas y 3 filas */
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-rows: 100px 1fr 100px 100px;
     height: 100vh;
 
     .item {
@@ -75,13 +75,6 @@
 
     .footer {
         background-color: #4a4a4a;
-        /* El footer no necesita posicionamiento explícito en este caso.
-            Grid lo coloca automáticamente en el siguiente espacio disponible,
-            que es la última celda de la última fila.
-            Sin embargo, si quisiéramos asegurarnos, podríamos hacer:
-            grid-column: 4 / 5;
-            grid-row: 3 / 4;
-        */
         grid-column: 1 / 5;
     }
 }
