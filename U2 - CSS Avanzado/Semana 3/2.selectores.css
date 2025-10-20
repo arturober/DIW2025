@@ -58,7 +58,7 @@ main {
 
         /* :not() excluye elementos de una selección.
         Esta regla añade un borde a todas las tarjetas que NO tengan la clase ".featured". */
-        &.card:not(.featured) {
+        &:not(.featured) {
             border-bottom: 3px solid red;
         }
     }
