@@ -1,0 +1,82 @@
+:root {
+    --base-size: 15vmin;
+    --min-circle-size: 80px;
+    --max-circle-size: 200px;
+    --color-hue-base: 170;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    font-size: min(10vw, 3.5rem);
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.circles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+    /* 4. round(): Redondea el 'gap' al múltiplo de 5px más cercano */
+    gap: round(nearest, 22px, 5px);
+}
+
+.circle {
+    /* Valor por defecto por si --scale no estuviera definido */
+    --scale: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+
+    --scaled-size: calc(var(--base-size) * var(--scale));
+    width: max(var(--min-circle-size), min(var(--max-circle-size), var(--scaled-size)));
+    height: max(var(--min-circle-size), min(var(--max-circle-size), var(--scaled-size)));
+
+    /* 1. (NUEVO) Calculamos la tonalidad dinámicamente */
+    /* Multiplicamos la escala por un número grande (ej. 40)
+     para que el color "viaje" por la rueda de colores. */
+    --color-hue: calc(var(--color-hue-base) + var(--scale) * 40);
+
+    /* 2. (MODIFICADO) Hacemos la saturación más extrema */
+    /* Multiplicamos por 25% en lugar de 15% */
+    --color-saturation: calc(50% + var(--scale) * 25%);
+
+    /* 3. (MODIFICADO) Hacemos la luminosidad más extrema */
+    /* Restamos un valor mayor (multiplicamos por 20% en lugar de 5%) */
+    --color-lightness: calc(80% - var(--scale) * 20%);
+
+    /* 4. (MODIFICADO) Aplicamos la NUEVA tonalidad calculada */
+    background-color: hsl(var(--color-hue), var(--color-saturation), var(--color-lightness));
+}
+
+/* --- 5. attr() (La forma correcta) --- */
+/* Usamos attr() para leer 'data-label' y mostrarlo DENTRO del círculo */
+.circle::before {
+    content: attr(data-label);
+    font-size: max(12px, 0.8vw);
+    /* ¡Otro max() de regalo! */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
