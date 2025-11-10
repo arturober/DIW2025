@@ -60,5 +60,30 @@ main {
                 background-color: #c0392b;
             }
         }
+        &#box-fill-forwards {
+            background-color: #f1c40f;
+                animation-name: demo-forwards;
+                animation-duration: 2s;
+                animation-iteration-count: 1; /* Solo se ejecuta 1 vez */
+                
+                /* PROPIEDAD CLAVE: 'forwards'
+                Mantiene los estilos del keyframe 100% cuando termina.
+                */
+                animation-fill-mode: forwards;
+        }
+
+        &#box-fill-backwards {
+            background-color: #e67e22;
+            
+            animation-name: demo-backwards;
+            animation-duration: 2s;
+            animation-delay: 2s; /* Delay crucial para 'backwards' */
+            animation-iteration-count: 1;
+
+            /* PROPIEDAD CLAVE: 'backwards'
+            Aplica los estilos del keyframe 0% durante el 'delay'.
+            */
+            animation-fill-mode: backwards;            
+        }
     }
 }

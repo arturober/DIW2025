@@ -60,3 +60,24 @@
         transform: translateX(0) rotate(0);
     }
 }
+@keyframes demo-forwards {
+    /* El 0% es el estado base (amarillo, sin transformar) */
+    100% {
+        /* Al terminar, será verde y más grande */
+        background-color: #2ecc71; 
+        transform: scale(1.2) rotate(10deg);
+    }
+}
+
+@keyframes demo-backwards {
+    0% {
+        /* Estado inicial: pequeño y semi-transparente */
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+         /* Estado final: vuelve a la normalidad */
+        transform: scale(1);
+        opacity: 1;
+    }
+}
