@@ -21,13 +21,13 @@ main {
 
             &#caja-con-box-shadow {
                 box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-                border: 2px dashed red;
+                /* border: 2px dashed red; */
             }
 
             &#caja-con-drop-shadow {
                 /* Sombra con forma de estrella */
                 filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
-                border: 2px solid transparent;
+                /* border: 2px solid transparent; */
             }
         }
     }
