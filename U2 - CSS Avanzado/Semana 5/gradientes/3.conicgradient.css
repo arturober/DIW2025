@@ -34,7 +34,7 @@ body {
     &.grad-4 {
         background:
             /* 1. Capa superior: Un círculo blanco en el centro */
-            radial-gradient(white 60%, transparent 61%),
+            radial-gradient(white 50%, transparent 50%),
             /* 2. Capa inferior: El gráfico cónico */
             conic-gradient(#f9e04a 0% 50%, #f39c12 50% 100%);
         border-radius: 50%;
