@@ -27,10 +27,10 @@ main {
         color: black;
         padding: 20px;
         border-radius: 0 0 10px 10px;
-        /* mix-blend-mode: difference; */
+        mix-blend-mode: difference;
         /* mix-blend-mode: overlay; */
         /* mix-blend-mode: screen; */
         /* mix-blend-mode: multiply; */
-        mix-blend-mode: luminosity;
+        /* mix-blend-mode: luminosity; */
     }
 }
